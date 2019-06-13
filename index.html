@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-	<body>
-		<div align="center" width="800px" height="600px">
-			<div height="150px">
-				<h1>Hello World</h1>
-				<p>
-				This is a text based adventure game that currently has no functionality. <br />
-				Phrases: use, check, look, read, take.
-				</p>
-			</div>
-			<div id="scene" height="200px">
-			
-			</div>
-			<div id="details" height="200px">
-						
-			</div>
-			<div height="50px">
-				<input type="text" id="input" value="">
-				<button type="button">Send</button>
-			</div>
-		</div>
-	</body>
-	
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Text Thing</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/builds_webgl.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Text Thing</div>
+      </div>
+    </div>
+  </body>
 </html>
